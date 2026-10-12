@@ -1,0 +1,30 @@
+name: CI
+
+on:
+  pull_request:
+  push:
+    branches-ignore: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - name: 型チェック
+        run: npm run typecheck
+      - name: ユニットテスト
+        run: npm test
+      - name: Web版ビルド
+        run: npm run build:web
+      - name: Chromiumでの動作確認(E2E)
+        run: |
+          npx playwright-core install --with-deps chromium
+          node scripts/e2e.mjs

@@ -1,0 +1,41 @@
+{
+  "expo": {
+    "name": "TOMORI PICK",
+    "slug": "tomori-pick",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "backgroundColor": "#F6F1E4",
+    "splash": {
+      "image": "./assets/splash-icon.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#F6F1E4"
+    },
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.tomoriapplab.pick"
+    },
+    "android": {
+      "package": "com.tomoriapplab.pick",
+      "adaptiveIcon": {
+        "backgroundColor": "#F6F1E4",
+        "foregroundImage": "./assets/android-icon-foreground.png"
+      },
+      "predictiveBackGestureEnabled": false
+    },
+    "web": {
+      "bundler": "metro",
+      "output": "single",
+      "favicon": "./assets/favicon.png",
+      "name": "TOMORI PICK",
+      "shortName": "PICK",
+      "lang": "ja",
+      "backgroundColor": "#F6F1E4",
+      "themeColor": "#F6F1E4"
+    },
+    "experiments": {
+      "baseUrl": "/tomori-pick-003"
+    }
+  }
+}
